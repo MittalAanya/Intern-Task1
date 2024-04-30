@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 from datetime import timedelta
 import os
@@ -89,6 +89,7 @@ DATABASES = {
         
     }
 }
+DATABASES["default"] = dj_database_url.parse("postgres://banaotask1_django_user:vxb5UatoWOAf8y24AtcWQ55EV8bYW9Zq@dpg-coofq8ol5elc739ofk30-a.oregon-postgres.render.com/banaotask1_django")
 
 
 # Password validation
